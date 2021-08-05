@@ -36,7 +36,7 @@ public class PaymentController {
         log.info("***查询结果***：" + result);
         log.info("***当前处理端口***：" + serverPort);
         if (result != null) {
-            return new CommonResult(200, "查询成功", result);
+            return new CommonResult(200, "查询成功,result:" + result + ",serverPort:" + serverPort, result);
         } else {
             return new CommonResult(-1, "没有对应记录，查询ID：" + id);
         }

@@ -1,0 +1,19 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: orderFeign80
+    prefer-ip-address: true
+spring:
+  application:
+    name: CLOUD-ORDER-FEIGN-SERVICE
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+logging:
+  level:
+    com.happy.springcloud.service.PaymentService: debug

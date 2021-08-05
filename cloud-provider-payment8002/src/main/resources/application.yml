@@ -6,9 +6,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://xxx:3306/hptest?useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: xxx
-    password: xxx
+    url: jdbc:mysql://39.105.206.212:3306/hptest?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: zhonglq
+    password: 1234asd
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml

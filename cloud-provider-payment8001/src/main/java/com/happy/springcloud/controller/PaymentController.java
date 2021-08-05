@@ -44,7 +44,7 @@ public class PaymentController {
         log.info("***查询结果***：" + result);
         log.info("***当前处理端口***：" + serverPort);
         if (result != null) {
-            return new CommonResult(200, "查询成功", result);
+            return new CommonResult(200, "查询成功,result:" + result + ",serverPort:" + serverPort, result);
         } else {
             return new CommonResult(-1, "没有对应记录，查询ID：" + id);
         }
@@ -61,5 +61,15 @@ public class PaymentController {
             log.info("****host:" + instance.getHost() + ",port:" + instance.getPort() + ",url:" + instance.getUri());
         }
         return this.discoveryClient;
+    }
+
+    @RequestMapping("/timeout")
+    public String mockTimeOut() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "hello timeout";
     }
 }
